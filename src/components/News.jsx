@@ -6,7 +6,7 @@ const News = ({news}) => {
     
   return (
     <div className='row'>
-        {news.map(paper => (
+        {news?.map(paper => (
             <CardNews key={paper.url} paper={paper}/>
         ))}
     </div>
