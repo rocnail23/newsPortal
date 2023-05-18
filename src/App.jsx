@@ -8,7 +8,7 @@ function App() {
   const [news, setNews] = useState([])
   useEffect(() => {
     const getNews = async () => {
-      const url = `http://api.mediastack.com/v1/news?access_key=8f5e1eeab1dd8b49ae81207422045685&categories=${categoryRequired}`
+      const url = `https://api.mediastack.com/v1/news?access_key=8f5e1eeab1dd8b49ae81207422045685&categories=${categoryRequired}`
       const res = await fetch(url)
       const news = await res.json()
       
