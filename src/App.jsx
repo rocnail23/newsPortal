@@ -8,11 +8,11 @@ function App() {
   const [news, setNews] = useState([])
   useEffect(() => {
     const getNews = async () => {
-      const url = `https://newsapi.org/v2/top-headlines?country=us&category=${categoryRequired}&apiKey=78f63796b3fb43bd9230ab65376e8eab`
+      const url = `http://api.mediastack.com/v1/news?access_key=8f5e1eeab1dd8b49ae81207422045685&categories=${categoryRequired}`
       const res = await fetch(url)
       const news = await res.json()
-      console.log(news)
-      setNews(news.articles)
+      
+      setNews(news.data)
     }
 
     getNews()
